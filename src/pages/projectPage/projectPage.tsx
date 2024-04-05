@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getAllProjects } from '../../api/handleApi';
+import { getAllProjects, deleteProject } from '../../api/handleApi';
 import Project from '../../components/project';
 
 interface Project {
@@ -32,6 +32,16 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ activePath }) => {
         }
     };
 
+    const handleDeleteProject = async (id: string) => {
+        console.log('Deleting project with id:', id);
+        try {
+            await deleteProject(id);
+            fetchProjects();
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
     return (
         <div className={`work ${activePath === '/admin/projects' ? 'all-projects' : ''}`} id="work">
             <h1>Noteworthy projects I have worked on</h1>
@@ -39,6 +49,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ activePath }) => {
                 {projects.map((project) => (
                     <Project
                         key={project._id}
+                        id={project._id}
                         title={project.title}
                         description={project.description}
                         firstTechnology={project.firstTechnology}
@@ -46,13 +57,12 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ activePath }) => {
                         thirdTechnology={project.thirdTechnology}
                         deployedUrl={project.deployedUrl}
                         activePath={activePath}
+                        handleDeleteProject={handleDeleteProject}
                     />
                 ))}
             </div>
             {activePath === '/admin/projects' ? (
                 <div className="work_btn" style={{display: "none"}}>
-                    <button className="delete-btn">Delete</button>
-                    <button className="user-btn">Edit</button>
                 </div>
             ) : (
                 <div className="work_btn">Show More</div>

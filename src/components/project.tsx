@@ -3,6 +3,7 @@ import { CiFolderOn } from 'react-icons/ci';
 import { IoMdOpen } from 'react-icons/io';
 
 interface ProjectProps {
+    id: string;
     title: string;
     description: string;
     firstTechnology: string;
@@ -10,16 +11,19 @@ interface ProjectProps {
     thirdTechnology?: string;
     deployedUrl: string;
     activePath: string;
+    handleDeleteProject: (id: string) => void;
 }
 
 const Project: React.FC<ProjectProps> = ({
+    id,
     title,
     description,
     firstTechnology,
     secondTechnology,
     thirdTechnology,
     deployedUrl,
-    activePath
+    activePath,
+    handleDeleteProject
 }) => {
     return (
         <div className="project">
@@ -35,7 +39,7 @@ const Project: React.FC<ProjectProps> = ({
             <p>{description}</p>
             {activePath === '/admin/projects' ? (
                 <div className="project_buttons" style={{marginTop: "30px"}}>
-                    <button className="delete-btn" style={{marginRight: "20px"}}>Delete</button>
+                    <button className="delete-btn" style={{marginRight: "20px"}} onClick={() => handleDeleteProject(id)}>Delete</button>
                     <button className="user-btn">Edit</button>
                 </div>
             ) : (
