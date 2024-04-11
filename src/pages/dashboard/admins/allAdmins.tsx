@@ -46,10 +46,6 @@ const activeNavItem = navItems.find(item => item.path === activePath);
 
   return (
     <>
-      <div id="popup">
-        <p>User Deleted successfully</p>
-        <a href="#">Close</a>
-      </div>
       <div className="dash-container" id="blur">
           <div className="hamburger">
               <div className="bar"></div>
