@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getAllProjects, deleteProject } from '../../api/handleApi';
 import Project from '../../components/project';
 
-interface Project {
+interface ProjectProps {
     _id: string;
     title: string;
     description: string;
@@ -17,7 +17,7 @@ interface ProjectsPageProps {
 }
 
 const ProjectsPage: React.FC<ProjectsPageProps> = ({ activePath }) => {
-    const [projects, setProjects] = useState<Project[]>([]);
+    const [projects, setProjects] = useState<ProjectProps[]>([]);
 
     useEffect(() => {
         fetchProjects();
