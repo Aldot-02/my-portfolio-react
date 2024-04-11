@@ -10,7 +10,7 @@ import AdminCertification from './pages/dashboard/certifications/adminCertificat
 
 const App: React.FC = () => {
   return (
-    <>
+    <> 
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/admin" element={<Auth />} />

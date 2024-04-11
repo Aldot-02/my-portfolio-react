@@ -10,8 +10,10 @@ import { PiDatabaseThin } from "react-icons/pi";
 import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
 import { PiSoundcloudLogoLight } from "react-icons/pi";
 import { SlDocs } from "react-icons/sl";
+import { TbMenu2 } from "react-icons/tb";
 import './homePage.css';
 import ProjectsPage from './projectPage/projectPage';
+import { useState, useEffect } from 'react';
 const Image = require('../images/Image.png')
 const AboutProfile = require('../images/profile.jpeg')
 const Alx = require('../images/alx.jpeg')
@@ -20,65 +22,56 @@ const Andela = require('../images/andela.png');
 
 
 const HomePage: React.FC = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(true);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.pageYOffset;
+            setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+            setPrevScrollPos(currentScrollPos);
+
+            const header = document.querySelector('header');
+            if (currentScrollPos > 0) {
+                header?.classList.remove('header-top');
+                header?.classList.add('header-scroll');
+            } else {
+                header?.classList.remove('header-scroll');
+                header?.classList.add('header-top');
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [prevScrollPos]);
+
 
     return (
         <>
-            <header>
-                <nav className="navbar">
-                    
-                    <Link to='' className="logo">
-                        <Reaveal>
-                            <img alt="" src={Image} />
-                        </Reaveal>
+            <header style={{ top: visible ? 0 : -128 }}>                 
+                <Link to='' className="logo">
+                        <img alt="" src={Image} />
+                </Link>
+                <TbMenu2 id='menu-icon' className={isMenuOpen ? 'close-icon' : ''} onClick={toggleMenu} />
+                <nav className={`navbar ${isMenuOpen ? 'active-menu' : ''}`}>
+                    <a href="#about" onClick={toggleMenu}>About</a>
+                    <a href="#experience" onClick={toggleMenu}>Experience</a>
+                    <a href="#work" onClick={toggleMenu}>Work</a>
+                    <a href="#contact" onClick={toggleMenu}>Contact</a>
+                    <Link to="https://drive.google.com/file/d/1_WW0lXogY2RWcP3TRN31hHH5oU87cgCB/view?usp=drive_link" className="resume-button" id="login-logout-button" target='_blank' rel="noreferrer" onClick={toggleMenu}>
+                        Resume
                     </Link>
-                    <div className="hamburger">
-                        <Reaveal>
-                            <div className="bar"></div>
-                        </Reaveal>
-                    </div>
-                    <Reaveal>
-                        <ul className="nav-links">
-                            <li><Link to="#about">About</Link></li>
-                            <li><Link to="#work">Experience</Link></li>
-                            <li><Link to="#blog">Work</Link></li>
-                            <li><Link to="contact">Contact</Link></li>
-                            <li className="resume-button-li">
-                                <a href="https://drive.google.com/file/d/1_WW0lXogY2RWcP3TRN31hHH5oU87cgCB/view?usp=drive_link" className="resume-button" id="login-logout-button" target='_blank' rel="noreferrer">
-                                    Resume
-                                </a>
-                            </li>
-                        </ul>
-                    </Reaveal>
                 </nav>
             </header>
-                <nav className="mobile-nav">
-                    <Reaveal>
-                        <Link to="#about" className="remove-mobile-nav">About</Link>
-                    </Reaveal>
-                    <Reaveal>
-                        <Link to="#work" className="remove-mobile-nav">Experience</Link>
-                    </Reaveal>
-                    <Reaveal>
-                        <Link to="#blog" className="remove-mobile-nav">Work</Link>
-                    </Reaveal>
-                    <Reaveal>
-                        <Link to="#contact" className="remove-mobile-nav">Contact</Link>
-                    </Reaveal>
-                    <Reaveal>
-                        <a href="https://drive.google.com/file/d/1_WW0lXogY2RWcP3TRN31hHH5oU87cgCB/view?usp=drive_link" className="resume-button" id="login-logout-button">Resume</a>
-                    </Reaveal>
-                </nav>
-                <div id="popup">
-                    <Reaveal>
-                        <h1>SUCCESS</h1>
-                    </Reaveal>
-                    <Reaveal>
-                        <p>Thanks for getting in touch with me. I will get back to you in several hours to days.</p>
-                    </Reaveal>
-                    <Reaveal>
-                        <Link to="#">Close</Link>
-                    </Reaveal>
-                </div>
+            <div className={`nav-bg ${isMenuOpen ? 'active-menu' : ''}`}></div>
             <main className="container"  id="blur">
                 <aside className="left_col">
                     <div className="col_1">
@@ -138,10 +131,12 @@ const HomePage: React.FC = () => {
                                 </Reaveal>
                             </div>
                             <Reaveal>
-                                <div className="message">
-                                        <MdOutlinePermPhoneMsg style={{fontSize: "20px", marginRight: "15px"}}/>
-                                        <p>Hire Me</p>
-                                </div>
+                                <a href="#contact">
+                                    <div className="message">
+                                            <MdOutlinePermPhoneMsg style={{fontSize: "20px", marginRight: "15px"}}/>
+                                            <p>Hire Me</p>
+                                    </div>
+                                </a>
                             </Reaveal>
                         </div>
                     </div>
@@ -154,12 +149,10 @@ const HomePage: React.FC = () => {
                             </Reaveal>
                         </div>
                         <div className="about-card my_story">
-                            <Reaveal>
+                            <div className="about-heading">
+                                <div className="line"></div>
                                 <h2><span className='color'>01. </span>About Me</h2>
-                            </Reaveal>
-                            <Reaveal>
-                                <p><em><q className="quote color">Think the design, and Design the Thinking.</q></em></p>
-                            </Reaveal>
+                            </div>
                             <Reaveal>
                                 <p>I'm a design-minded, detail oriented software engineer passionate about combining beautiful code with beautiful design.</p>
                             </Reaveal>
@@ -264,9 +257,10 @@ const HomePage: React.FC = () => {
                     </div>
 
                     {/* EXPERIENCE SECTION */}
-                    <Reaveal>
-                        <h2 style={{textAlign: "center", marginTop: "200px"}}><span className='color'>02. </span>Experience</h2>
-                    </Reaveal>
+                    <div className="experience-header" id='experience'>
+                        <h2><span className='color'>02. </span>Experience</h2>
+                        <div className="exp-line"></div>
+                    </div>
                     <div className="timeline">
                         <div className="timeline-container left-container">
                             <img alt="" src={Alx}/>
@@ -377,8 +371,8 @@ const HomePage: React.FC = () => {
                     <ProjectsPage activePath="/" />
 
                     {/* <!-- CONTACT PAGE --> */}
-                    <h2 style={{textAlign: "center", margin: "100px"}}><span className='color'>04. </span>Get In Touch</h2>
-                    <div className="mail-me" id="contact">
+                    <h2 style={{textAlign: "center", margin: "100px auto"}} id='contact'><span className='color'>04. </span>Get In Touch</h2>
+                    <div className="mail-me">
                         <div className='contact-me'>
                             <Reaveal>
                                 <p>Whether you have an idea for a <span className='color'>project</span> or just want to chat, feel free to send me an email!</p>

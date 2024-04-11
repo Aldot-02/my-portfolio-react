@@ -21,54 +21,6 @@ html {
   h2 {
     color: #fff;
   }
-  
-  #blur.blur-popup {
-    filter: blur(5px);
-    pointer-events: none;
-    user-select: none;
-  }
-  #popup {
-    position: fixed;
-    transform: translate(-50%, -50%);
-    width: 35%;
-    padding: 50px;
-    box-shadow: 0 5px 30px #f4581562;
-    background-color: #fff;
-    visibility: hidden;
-    opacity: 0;
-    transform: 0.5s;
-    z-index: 999;
-    border-radius: 5px;
-  }
-  #popup h1{
-    font-weight: bolder;
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: #F45815;
-  }
-  #popup.blur-popup {
-    top: 50%;
-    left: 53%;
-    visibility: visible;
-    opacity: 1;
-    transform: 0.5s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: justify;
-  }
-  #popup a {
-    position: relative;
-    padding: 10px 35px;
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #F45815;
-    border: none;
-    border-radius: 4px;
-  }
-  
   ::-webkit-scrollbar {
     width: 10px;
   }
@@ -81,181 +33,110 @@ html {
     background-color:#0d2242;
   }
   
-  /* CURSOR ANIMATION */
-  
-  
-  /* END OF CURSOR ANIMATIONS */
-  
-  /* ANIMATING BACKGROUND DIAMONDS */
-  
-  .diamonds .diamond {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background-color: transparent;
-    border: 4px solid #F45815;
-    z-index: -999;
-  }
-  
-  .diamonds .diamond:nth-child(1) {
-    top: 12%;
-    left: 42%;
-    animation: animate 10s linear infinite;
-  }
-  .diamonds .diamond:nth-child(2) {
-    top: 70%;
-    left: 50%;
-    animation: animate 7s linear infinite;
-  }
-  .diamonds .diamond:nth-child(3) {
-    top: 17%;
-    left: 6%;
-    animation: animate 9s linear infinite;
-  }
-  .diamonds .diamond:nth-child(4) {
-    top: 20%;
-    left: 60%;
-    animation: animate 10s linear infinite;
-  }
-  .diamonds .diamond:nth-child(5) {
-    top: 67%;
-    left: 10%;
-    animation: animate 6s linear infinite;
-  }
-  .diamonds .diamond:nth-child(6) {
-    top: 80%;
-    left: 70%;
-    animation: animate 12s linear infinite;
-  }
-  .diamonds .diamond:nth-child(7) {
-    top: 60%;
-    left: 80%;
-    animation: animate 15s linear infinite;
-  }
-  .diamonds .diamond:nth-child(8) {
-    top: 32%;
-    left: 25%;
-    animation: animate 16s linear infinite;
-  }
-  .diamonds .diamond:nth-child(9) {
-    top: 90%;
-    left: 25%;
-    animation: animate 9s linear infinite;
-  }
-  .diamonds .diamond:nth-child(10) {
-    top: 20%;
-    left: 80%;
-    animation: animate 5s linear infinite;
-  }
-  .diamonds .diamond:nth-child(11) {
-    bottom: 12%;
-    Right: 0%;
-    animation: animate 5s linear infinite;
-  }
-  .diamonds .diamond:nth-child(12) {
-    bottom: 70%;
-    right: 50%;
-    animation: animate 5s linear infinite;
-  }
-  .diamonds .diamond:nth-child(13) {
-    bottom: 17%;
-    right: 6%;
-    animation: animate 9s linear infinite;
-  }
-  .diamonds .diamond:nth-child(14) {
-    bottom: 20%;
-    right: 60%;
-    animation: animate 10s linear infinite;
-  }
-  .diamonds .diamond:nth-child(15) {
-    bottom: 67%;
-    right: 0%;
-    animation: animate 6s linear infinite;
-  }
-  .diamonds .diamond:nth-child(16) {
-    bottom: 80%;
-    right: 70%;
-    animation: animate 12s linear infinite;
-  }
-  .diamonds .diamond:nth-child(17) {
-    bottom: 60%;
-    right: 20%;
-    animation: animate 15s linear infinite;
-  }
-  .diamonds .diamond:nth-child(18) {
-    bottom: 32%;
-    right: 25%;
-    animation: animate 16s linear infinite;
-  }
-  .diamonds .diamond:nth-child(19) {
-    bottom: 90%;
-    right: 25%;
-    animation: animate 9s linear infinite;
-  }
-  .diamonds .diamond:nth-child(20) {
-    bottom: 20%;
-    right: 80%;
-    animation: animate 5s linear infinite;
-  }
-  
-  @keyframes animate {
-    0% {
-        transform: scale(0) translateY(0) rotate(0);
-        opacity: 0.4;
-    }
-    100% {
-        transform: scale(1.3) translateY(-90px) rotate(360deg);
-        opacity: 0;
-    }
-  }
-  
-  /* END OF DIAMONDS ANIMATION */
-  
   /* NAVIGATION BAR STYLING */
-  .navbar {
+/* 
+  header {
+    padding: 20px 80px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: fit-content;
+    z-index: 100;
+  }
+
+  header {
     padding: 20px 80px;
-    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid #0C2342;
+    z-index: 100;
+    left: 0;
+    position: fixed;
+    transition: top 0.3s ease-in-out;
+    animation: fadeInDown 0.6s ease-out;
+  } */
+
+  /* Header style when not scrolling */
+.header-top {
+  padding: 20px 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+/* Header style when scrolling */
+.header-scroll {
+  padding: 20px 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px) brightness(40%);
+  background-color: #0a192fe5;
+  z-index: 100;
+  left: 0;
+  position: fixed;
+  transition: top 0.3s ease-in-out;
+  animation: fadeInDown 0.6s ease-out;
+  box-shadow: 0px 7px 20px rgba(10, 25, 47, 0.1);
+}
+
+  @keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* .header-scroll::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: linear-gradient(90deg, transparent, #fff);
+    transition: .5s;
+  }
+
+  .header-scroll:hover::before {
+    left: 100%;
+  } */
+
+  .navbar a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: .3s;
+  }
+
+  .navbar a:hover {
+    color: #F45815;
+  }
   
-  }
-  .mobile-nav {
-    display: none;
-  }
-  .social_res-icons {
-    display: none;
-  }
-  .hamburger {
-    display: none;
-  }
-  .mobile-nav{
-    display: none;
-  }
-  
-  .navbar .logo img {
+  .header-scroll .logo img {
     height: 80px;
     width: 80px;
     transition: all .3s ease-out;
   }
-  .navbar .logo img:hover {
+  .header-scroll .logo img:hover {
     opacity: .8;
   }
-  
-  .navbar ul.nav-links {
-    list-style: none;
-    display: flex;
-  }
-  
-  .navbar ul.nav-links li {
-    padding: 0.5rem 2rem;
-  }
-  
-  .navbar ul.nav-links li:nth-child(5) {
-    padding: 0;
-    display: flex;
-    align-items: center;
+
+  #menu-icon {
+    font-size: 36px;
+    color: #fff;
+    display: none;
   }
   
   a {
@@ -472,35 +353,6 @@ html {
     width: 100%;
   }
   
-  
-  .profile_image {
-    object-fit: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .profile_image img {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    top: -20px;
-  }
-  .image-container {
-    width: 500px;
-    height: 500px;
-    position: relative;
-  }
-  .image-container::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 10px;
-    border-radius: 50%;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(to bottom, rgba(244, 88, 21, 0.7), rgba(244, 88, 21, 0));
-  }
-  
   /* THE END OF INDEX SECTION STYLING */
   
   
@@ -518,6 +370,7 @@ html {
     display: grid;
     height: fit-content;
     grid-template-columns: repeat(2, 1fr);
+    width: 100%;
   }
   
   .my_story_profile {
@@ -554,14 +407,31 @@ html {
     padding: 30px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     height: 100%;
+    width: 100%;
   }
-  .my_story h2 {
-    font-size: 30px;
+  .my_story .about-heading {
+    display: flex;
+    width: 100%;
     margin-bottom: 60px;
+    align-items: center;
+    height: 30px;
+}
+.my_story .about-heading h2 {
+    font-size: 30px;
     color: #ffffffb4;
+    align-self: flex-end;
+    margin: 0;
   }
+
+  .my_story .about-heading .line {
+    width: 50%;
+    height: 0.4px;
+    background-color: #F45815;
+    margin-right: 20px;
+    align-self: center;
+  }
+
   .my_story p {
     color: #ffffff7e;
     font-size: 16px;
@@ -577,6 +447,9 @@ html {
 .tech-skills ul, .timeline-container .text-box ul {
   list-style-type: none;
   padding-left: 0;
+}
+.tech-skills ul {
+  margin: 30px;
 }
 .tech-skills li, .timeline-container .text-box ul li {
   position: relative;
@@ -625,6 +498,22 @@ html {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.experience-header {
+  display: flex;
+  width: 50vw;
+  margin-bottom: 60px;
+  align-items: center;
+  height: 30px;
+}
+
+.exp-line {
+  width: 50%;
+  height: 0.4px;
+  background-color: #F45815;
+  margin-left: 20px;
+  align-self: center;
 }
 .timeline-container .text-box{
   color: #e1d5d080;
@@ -769,7 +658,7 @@ html {
 .service-cards .card {
   height: 330px;
   background-color: #0d2242;
-  padding: 3% 8%;
+  padding: 20px;
   border: 0.5px solid #0f2f5ffe;
   border-radius: 8px;
   transition: .6s;
@@ -805,7 +694,6 @@ html {
 .service-cards .card p{
   color: #ffffff5b;
   width: 100%;
-  margin: 12px 0;
   text-align: center;
   margin-top: 20px;
   line-height: 20px;
@@ -1539,12 +1427,9 @@ html {
     body {
         overflow-x: hidden;
     }
-    .diamonds .diamond {
-        display: none;
-    }
-    .navbar {
-        padding: 20px;
-        width: 100%;
+    .tech-skills ul{
+      margin-right: 0;
+      margin-left: 30px;
     }
     .social_res-icons {
         display: flex;
@@ -1560,73 +1445,63 @@ html {
         cursor: pointer;
         color: #ffffff80;
     }
-    .hamburger {
-        display: inline;
-        cursor: pointer;
-        width: 30px;
-        position: relative;
-        z-index: 9999;
-    }  
-    .hamburger .bar, .hamburger:after, .hamburger:before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: #ffffff80;
-        margin: 7px 0px;
-        transition: 0.4s;
-        border-radius: 6px;
-        z-index: 999;
-    }  
-    .hamburger.is-active:before{
-        transform: rotate(-45deg) translate(-8px, 6px);
-    }
-    .hamburger.is-active:after{
-        transform: rotate(45deg) translate(-8px, -6px);
-    }
-    .hamburger.is-active .bar{
-        opacity: 0;
-    }
-    .mobile-nav{
-        position: fixed;
-        display: block;
-        top: 0;
-        right: 100%;
-        width: 80%;
-        min-height: 100vh;
-        backdrop-filter: blur(10px);
-        background-color: #082147f3;
-        padding-top: 45px;
-        transition: .4s;
-        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    }
-    .mobile-nav.is-active{
-        right: 0;
-    }
-    .mobile-nav a{
-        display: block;
-        width: 100%;
-        margin-bottom: 17px;
-        padding: 12px 16px;
-        cursor: pointer;
-  
-    }
-    .mobile-nav a:hover{
-        background-color: #082147;
-  
-    }
-    .navbar .logo img {
-        height: 50px;
-        width: 50px;
-    }
-    .navbar ul.nav-links {
-        display: none;
-    }
     a {
         text-decoration: none;
         color: white;
         transition: color 0.3s ease;
         font-size: 16px;
+    }
+
+    .header-top {
+      padding: 40px 20px 0 20px;
+      width: 100%;
+    }
+    .header-scroll {
+      padding: 20px;
+      width: 100%;
+    }
+
+    .logo img{
+      height: 50px;
+      width: 50px;
+    }
+    .header-scroll .logo img {
+      height: 50px;
+      width: 50px;
+    }
+
+    #menu-icon {
+      display: block;
+    }
+    .navbar {
+      position: fixed;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 4rem 4%;
+      display: none;
+    }
+    .navbar.active-menu {
+      display: block;
+    }
+    .navbar a {
+      display: block;
+      margin: 1.5rem 0;
+    }
+    .nav-bg {
+      position: fixed;
+      top: 11.8%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(10px) brightness(40%);
+      background-color: #0a192fe5;
+      z-index: 99;
+      display: none ;
+    }
+
+    .nav-bg.active-menu {
+      display: block;
     }
     
     a:hover {
@@ -1644,16 +1519,16 @@ html {
     }
     .index {
         flex-direction: column;
+        margin-top: 0;
+        margin-bottom: 50px;
     }
     .index_content {
-        flex-direction: column;
         padding: 0px;
         width: 100%;
-        order: 2;
   
     }
-    .index_content .greetings,.role,.description {
-        padding-bottom: 15px;
+    .index_content .greetings {
+        margin-bottom: 10px;
     }
     .index_content .greetings h1 {
         margin-top: 50px;
@@ -1667,9 +1542,6 @@ html {
     }
     .index_content .description p {
         text-align: justify;
-    }
-    .message {
-        align-self: center;
     }
     .profile_image {
         display: block;
@@ -1696,6 +1568,20 @@ html {
     .my_story {
         text-align: justify;
         padding: 0;
+        order: 1;
+    }
+    .my_story_profile {
+      order: 2;
+      margin-bottom: 100px;
+    }
+    .my_story .about-heading {
+      justify-content: center;
+      align-items: center;
+      margin-top: 100px;
+  }
+  
+    .my_story .about-heading .line {
+      display: none;
     }
     .my_skills {
         order: 4;
@@ -1943,12 +1829,58 @@ html {
     body {
         overflow-x: hidden;
     }
-    .diamonds .diamond {
-        display: none;
+
+
+    .header-top {
+      width: 100%;
+      padding: 50px 50px 0 50px;
+    }
+    .header-scroll {
+      width: 100%;
+      padding: 50px;
+    }
+
+    .logo img{
+      height: 70px;
+      width: 70px;
+    }
+    .header-scroll .logo img {
+      height: 50px;
+      width: 50px;
+    }
+
+    #menu-icon {
+      display: block;
     }
     .navbar {
-        padding: 50px 50px 0 50px;
-        width: 100%;
+      position: fixed;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 4rem 4%;
+      display: none;
+    }
+    .navbar.active-menu {
+      display: block;
+    }
+    .navbar a {
+      display: block;
+      margin: 1.5rem 0;
+    }
+    .nav-bg {
+      position: fixed;
+      top: 11.8%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(10px) brightness(40%);
+      background-color: #0a192fe5;
+      z-index: 99;
+      display: none ;
+    }
+
+    .nav-bg.active-menu {
+      display: block;
     }
     .social_res-icons {
         display: flex;
@@ -1963,69 +1895,6 @@ html {
         font-size: 28px;
         cursor: pointer;
         color: #ffffff80;
-    }
-    .hamburger {
-        display: inline;
-        cursor: pointer;
-        width: 30px;
-        position: relative;
-        z-index: 9999;
-    }  
-    .hamburger .bar, .hamburger:after, .hamburger:before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: #ffffff80;
-        margin: 7px 0px;
-        transition: 0.4s;
-        border-radius: 6px;
-        z-index: 999;
-    }  
-    .hamburger.is-active:before{
-        transform: rotate(-45deg) translate(-8px, 6px);
-    }
-    .hamburger.is-active:after{
-        transform: rotate(45deg) translate(-8px, -6px);
-    }
-    .hamburger.is-active .bar{
-        opacity: 0;
-    }
-    .mobile-nav{
-        position: fixed;
-        display: block;
-        top: 0;
-        right: 100%;
-        width: 70%;
-        min-height: 100vh;
-        backdrop-filter: blur(10px);
-        background-color: #082147f3;
-        padding-top: 50px;
-        transition: .4s;
-        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    }
-    .mobile-nav.is-active{
-        right: 0;
-    }
-    .mobile-nav a{
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        margin-bottom: 17px;
-        padding: 15px 18px;
-        cursor: pointer;
-  
-    }
-    .mobile-nav a:hover{
-        background-color: #082147;
-  
-    }
-    .navbar .logo img {
-        height: 70px;
-        width: 70px;
-    }
-    .navbar ul.nav-links {
-        display: none;
     }
     a {
         text-decoration: none;
@@ -2365,19 +2234,6 @@ html {
   @media only screen and (min-width: 601px) and (max-width: 768px) {
     
     /* CURSOR ANIMATION */
-    
-    #cursor {
-        border-radius: 50%;
-    }
-    .diamonds .diamond {
-        width: 50px;
-        height: 50px;
-    }
-    .navbar {
-        padding: 20px 60px;
-        width: 100%;
-    
-    }
     .social_res-icons {
         display: flex;
         margin-top: 70px;
@@ -2392,75 +2248,46 @@ html {
         cursor: pointer;
         color: #ffffff80;
     }
-    .hamburger {
-        display: inline;
-        cursor: pointer;
-        width: 40px;
-        position: relative;
-        z-index: 9999;
-    }  
-    .hamburger .bar, .hamburger:after, .hamburger:before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 4px;
-        background-color: #ffffff80;
-        margin: 8px 0px;
-        transition: 0.4s;
-        border-radius: 6px;
-        z-index: 999;
-    }  
-    .hamburger.is-active:before{
-        transform: rotate(-45deg) translate(-8px, 6px);
-    }
-    .hamburger.is-active:after{
-        transform: rotate(45deg) translate(-8px, -6px);
-    }
-    .hamburger.is-active .bar{
-        opacity: 0;
-    }
-    .mobile-nav{
-        position: fixed;
-        display: block;
-        top: 0;
-        right: 100%;
-        width: 40%;
-        min-height: 100vh;
-        backdrop-filter: blur(10px);
-        background-color: #082147f3;
-        padding-top: 50px;
-        transition: .4s;
-        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    }
-    .mobile-nav.is-active{
-        right: 0;
-    }
-    .mobile-nav a{
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        margin-bottom: 17px;
-        padding: 7px 20px;
-        cursor: pointer;
-  
-    }
-    .mobile-nav a:hover{
-        background-color: #082147;
-  
-    }
-    
-    .navbar .logo img {
-        height: 70px;
-        width: 70px;
-    }
-    .navbar ul.nav-links {
-        display: none;
-    }
     a {
         text-decoration: none;
         color: white;
         transition: color 0.3s ease;
         font-size: 18px;
+    }
+    
+
+    #menu-icon {
+      display: block;
+    }
+    .navbar {
+      position: fixed;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 4rem 4%;
+      display: none;
+    }
+    .navbar.active-menu {
+      display: block;
+    }
+    .navbar a {
+      display: block;
+      margin: 1.5rem 0;
+    }
+    .nav-bg {
+      position: fixed;
+      top: 11.8%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(10px) brightness(40%);
+      background-color: #0a192fe5;
+      z-index: 99;
+      display: none ;
+    }
+
+    .nav-bg.active-menu {
+      display: block;
     }
     /* END OF NAVIGATION BAR STYLING */
     
@@ -2801,22 +2628,11 @@ html {
   @media only screen and (min-width: 769px) and (max-width: 992px) {
     
     /* NAVIGATION BAR STYLING */
-    .navbar {
-        padding: 30px 50px 0 50px;
-    
-    } 
-    .mobile-nav {
-        display: none;
-    }
     a {
         font-size: 17px;
-    }    
-    .navbar ul.nav-links li {
-        padding: 0.5rem 1rem;
     }
-    
-    .navbar ul.nav-links li:nth-child(5) {
-        padding: 0.5rem 0 0.5rem 1.5rem;
+    header {
+      padding: 1.2rem 4%;
     }
     /* MAIN SECTION STYLING */
     
@@ -2975,9 +2791,20 @@ html {
     /* END OF OPEN-BLOG STYLING */
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 760px) {
+    .experience-header {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      margin-top: 100px;
+    }
+    
+    .exp-line {
+      display: none;
+    }
     .timeline {
-      margin: 50px auto;
+      margin: 20px auto;
     }
     .timeline::after {
       left: 10px
