@@ -28,7 +28,7 @@ const HomePage: React.FC = () => {
                     
                     <Link to='' className="logo">
                         <Reaveal>
-                            <img src={Image} />
+                            <img alt="" src={Image} />
                         </Reaveal>
                     </Link>
                     <div className="hamburger">
@@ -150,7 +150,7 @@ const HomePage: React.FC = () => {
                     <div className="about" id="about">
                         <div className="my_story_profile img">
                             <Reaveal>
-                                <img src={AboutProfile} style={{zIndex: "-99999"}}/>
+                                <img alt="" src={AboutProfile} style={{zIndex: "-99999"}}/>
                             </Reaveal>
                         </div>
                         <div className="about-card my_story">
@@ -269,7 +269,7 @@ const HomePage: React.FC = () => {
                     </Reaveal>
                     <div className="timeline">
                         <div className="timeline-container left-container">
-                            <img src={Alx}/>
+                            <img alt="" src={Alx}/>
                             <div className="text-box">
                                     <div className="experience">
                                         <Reaveal>
@@ -284,26 +284,26 @@ const HomePage: React.FC = () => {
                                     </div>
                                     <ul>
                                         <Reaveal>
-                                            <li>Line 138:37:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                            <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
                                         </Reaveal>
                                         <Reaveal>
-                                            <li>Line 138:37:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                            <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
                                         </Reaveal>
                                         <Reaveal>
-                                            <li>Line 138:37:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                            <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
                                         </Reaveal>
                                         <Reaveal>
-                                            <li>Line 138:37:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                            <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
                                         </Reaveal>
                                         <Reaveal>
-                                            <li>Line 138:37:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                            <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
                                         </Reaveal>
                                     </ul>
                                 <span className='left-container-arrow'></span>
                             </div>
                         </div>
                         <div className="timeline-container right-container">
-                            <img src={Chamber}/>
+                            <img alt="" src={Chamber}/>
                             <div className="text-box">
                                 <div className="experience">
                                     <Reaveal>
@@ -318,26 +318,26 @@ const HomePage: React.FC = () => {
                                 </div>
                                 <ul>
                                     <Reaveal>
-                                        <li>Line 138:37:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                        <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
                                     </Reaveal>
                                     <Reaveal>
-                                        <li>Line 138:37:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                        <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
                                     </Reaveal>
                                     <Reaveal>
-                                        <li>Line 138:37:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                        <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
                                     </Reaveal>
                                     <Reaveal>
-                                        <li>Line 138:37:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                        <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
                                     </Reaveal>
                                     <Reaveal>
-                                        <li>Line 138:37:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                        <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
                                     </Reaveal>
                                 </ul>
                                 <span className='right-container-arrow'></span>
                             </div>
                         </div>
                         <div className="timeline-container left-container">
-                            <img src={Andela}/>
+                            <img alt="" src={Andela}/>
                             <div className="text-box">
                                 <div className="experience">
                                     <Reaveal>
@@ -352,19 +352,19 @@ const HomePage: React.FC = () => {
                                 </div>
                                 <ul>
                                     <Reaveal>
-                                        <li>Line 138:37:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                        <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
                                     </Reaveal>
                                     <Reaveal>
-                                        <li>Line 138:37:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                        <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
                                     </Reaveal>
                                     <Reaveal>
-                                        <li>Line 138:37:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                        <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
                                     </Reaveal>
                                     <Reaveal>
-                                        <li>Line 138:37:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                        <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
                                     </Reaveal>
                                     <Reaveal>
-                                        <li>Line 138:37:  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                        <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
                                     </Reaveal>
                                 </ul>
                                 <span className='left-container-arrow'></span>
