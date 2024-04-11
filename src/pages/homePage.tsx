@@ -43,7 +43,7 @@ const HomePage: React.FC = () => {
                             <li><Link to="#blog">Work</Link></li>
                             <li><Link to="contact">Contact</Link></li>
                             <li className="resume-button-li">
-                                <a href="https://drive.google.com/file/d/1_WW0lXogY2RWcP3TRN31hHH5oU87cgCB/view?usp=drive_link" className="resume-button" id="login-logout-button" target='_blank'>
+                                <a href="https://drive.google.com/file/d/1_WW0lXogY2RWcP3TRN31hHH5oU87cgCB/view?usp=drive_link" className="resume-button" id="login-logout-button" target='_blank' rel="noreferrer">
                                     Resume
                                 </a>
                             </li>
