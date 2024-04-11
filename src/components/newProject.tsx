@@ -32,7 +32,7 @@ const NewProject: React.FC = () => {
         };
 
         fetchUserInfo();
-    }, [navigate]);
+    }, [navigate, userInfo]);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
