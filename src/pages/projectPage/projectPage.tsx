@@ -44,7 +44,11 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ activePath }) => {
 
     return (
         <div className={`work ${activePath === '/admin/projects' ? 'all-projects' : ''}`} id="work">
-            <h2 style={{textAlign: "center", marginBottom: "100px"}}><span className='color'>03. </span>Noteworthy projects I have worked on</h2>
+            {activePath === '/admin/projects' ? (
+                <h2 style={{textAlign: "center", marginBottom: "50px", textTransform: "uppercase", letterSpacing: 2, marginTop: "20px"}}>Noteworthy projects I have worked on</h2>
+            ):(
+                <h2 style={{textAlign: "center", marginBottom: "100px"}}><span className='color'>03. </span>Noteworthy projects I have worked on</h2>
+            )}
             <div className="work_section">
                 {projects.map((project) => (
                     <Project

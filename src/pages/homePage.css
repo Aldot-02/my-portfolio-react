@@ -267,6 +267,8 @@ html {
   
   a:hover {
     color: #F45815;
+    transition: .4s;
+    transform: translateY(-3px);
   }
   
   .resume-button {
@@ -274,14 +276,29 @@ html {
     border: 2px solid #F45815;
     text-decoration: none;
     border-radius: 2px;
-    transition: all 0.3s ease-out;
+    transition: all 0.4s;
+    position: relative;
+    z-index: 11;
+  }
+
+  .resume-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #F45815;
+    height: 100%;
+    width: 0;
+    z-index: -111111;
+    transition: .4s;
   }
   .resume-button:hover {
-    box-shadow: 3px 3px #F45815;
     background-color: transparent;
     color: #fff;
   }
-  
+  .resume-button:hover::before {
+    width: 100%;
+  }
   
   .resume-button-li a {
     text-decoration: none;
@@ -335,8 +352,7 @@ html {
   }
   
   .left_border,.right_border {
-    width: 1px;
-    background-color: #fff;
+    border: 0.2px solid #ffffffa9;
     
   }
   
@@ -429,17 +445,33 @@ html {
     margin-top: 30px;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: all .4s;
   }
-  
-  .message i {
-    margin-right: 20px;
+  .message::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #F45815;
+    height: 100%;
+    width: 0;
+    z-index: -111111;
+    transition: .4s;
   }
   
   .message:hover {
-    box-shadow: 3px 3px #F45815;
+    transform: translateY(-3px);
     background-color: transparent;
     color: #fff;
+    cursor: pointer;
   }
+
+  .message:hover::before {
+    width: 100%;
+  }
+  
   
   .profile_image {
     object-fit: cover;
@@ -479,14 +511,13 @@ html {
   /* THE ABOUT PAGE */
   
   .margin-scroll {
-    margin-top: 100px;
+    margin-top: 80px;
   }
   
   .about {
     display: grid;
     height: fit-content;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 70px;
   }
   
   .my_story_profile {
@@ -495,8 +526,8 @@ html {
     align-items: center;
   }
   .my_story_profile img{
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
     object-fit: cover;
     position: relative;
     bottom: 5px;
@@ -602,6 +633,7 @@ html {
   padding: 20px;
   border-radius: 5px;
   position: relative;
+  border: 0.5px solid #0f2f5ffe
 }
 .experience h2{
   margin-bottom: 8px;
@@ -645,7 +677,7 @@ html {
 .timeline::after {
   content: '';
   position: absolute;
-  width: 6px;
+  width: 2px;
   height: 100%;
   background-color: #F45815;
   top: 0;
@@ -671,7 +703,7 @@ html {
   border-left: 15px solid #0d2242;
   border-bottom: 15px solid transparent;
   top: 28px;
-  z-index: 1;
+  z-index: -11;
   right: -15px;
 }
 .timeline-container .text-box .right-container-arrow {
@@ -682,7 +714,7 @@ html {
   border-right: 15px solid #0d2242;
   border-bottom: 15px solid transparent;
   top: 28px;
-  z-index: 1;
+  z-index: -11;
   left: -15px;
 }
 .timeline-container:nth-child(1) {
@@ -783,151 +815,46 @@ html {
   background-color: transparent;
   transform: translateY(-8px);
   border-color: #F45815;
+  cursor: pointer;
+}
+.service-cards .card:hover h3{
+  color: #F45815;
+}
+.service-icon {
+  color: #F45815;
 }
   /* END OF THE ABOUT PAGE */
   
   /* THE CONTACT FORM */
-  
-  .personal_contact {
-    width: 300px;
-    height: 400px;
-    border: 1px solid #F45815;
-    padding: 50px 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    margin-right: -40px;
-    border-radius: 4px;
-    background-color: #F45815;
-    z-index: 999;
-  }
-  .personal_contact .contact_underline {
-    width: 150px;
-    border: 1px solid #0A192F;
-  }
-  .contact_title {
-    width: 200px;
-    height: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 60px;
-  }
-  
-  .personal_contact .contact_title h2 {
-    color: #0A192F;
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .flex_contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  .fast_contact {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    margin-bottom: 30px;
-  }
-  
-  .fast_contact div {
-    color: #0A192F;
-  }
-  
-  .fast_contact div p:nth-child(1) {
-    font-weight: 800;
-  }
-  .fast_contact div p a {
-    color: #0A192F;
-    font-size: 14px;
-  }
-  .fast_contact div p a:hover {
-    color: #0430709f;
-    font-size: 14px;
-    font-weight: 600;
-  }
-  
-  .fast_contact div p {
-    margin-top: 10px;
-  }
-  
-  .class_section {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .contact {
-    width: 60%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    border: 1px solid #F45815;
-    border-radius: 5px;
+  #contact .mail-me {
+    background-color: #f0f0f0;
     padding: 20px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    background: transparent;
-    padding: 2vw 4vw;
-    width: 90%;
-    max-width: 600px;
-    border-radius: 5px;
-  }
-  
-  form h3 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    text-align: center;
-    color: #ffffff7c;
-  }
-  
-  form .item, form textarea {
-    padding: .2rem;
-    margin: 3px auto;
-    width: 100%;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #F45815;
-    outline: none;
-    border-radius: 4px;
-    font-size: 14px;
-    color: #ffffff2d;
-  }
-  form .input-field,.textarea-field {
-    margin: 10px auto;
-    width: 100%;
-  }
-  .field .error-txt {
-    color: #d93025;
-    font-size: 12px;
-    margin-top: -10px;
-    display: none;
-  }
-  .field.error .item {
-    border-bottom: 1px solid #d93025;
-  }
-  .field.error .error-txt{
-    display: block;
-  }
-  
-  
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Styles for the paragraphs inside the container */
+.mail-me{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.mail-me .contact-me {
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.mail-me p {
+  color: #e1d5d080;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
   form button {
     padding: 10px 30px;
     background: transparent;
@@ -939,25 +866,31 @@ html {
     width: 150px;
     margin: 20px auto 0;
     border-radius: 4px;
-    transition: all .3s ease-out;
+    transition: all .3s;
+    z-index: 11111;
+    position: relative;
   }
-  
   form button:hover {
-    box-shadow: 3px 3px #F45815;
-    color: #ffffff;
+    color: #fff;
+    transform: translateY(-4px);
   }
-  input[type="text"]:focus,
-  textarea:focus {
-  outline: none;
+
+
+  form button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #F45815;
+    height: 100%;
+    width: 0;
+    z-index: -111111;
+    transition: .4s;
   }
   
-  textarea {
-    resize: vertical;
-    overflow: auto;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+  form button:hover::before {
+    width: 100%;
   }
-  
   /* THE END OF THE CONTACT FORM */
   
   
@@ -1091,53 +1024,71 @@ html {
     margin-bottom: 40px;
   }
   
-  .project {
+  .Project {
     padding: 35px 30px;
-    background-color: #0d2242;
+    background: #0d2242;
     border-radius: 3px;
     cursor: pointer;
-    box-shadow: 3px 3px 10px #0d2242;
+    z-index: 1;
+    transition: .6s;
   }
-  .project h2{
+  .project_buttons {
+    display: flex;
+  }
+  .Project:hover {
+    background-color: transparent;
+    transform: translateY(-4px);
+    transition: all .4s;
+  }
+  .Project:hover h2 {
+    color: #F45815;
+    transition: all .4s;
+  }
+  .Project:hover .languages ul li {
+    color: #F45815;
+    transition: all .4s;
+  }
+  .Project:hover p {
+    color: #Ffff;
+    transition: all .4s;
+  }
+  .Project h2{
     margin-bottom: 20px;
     color: #fff;
+    font-size: 20px;
   }
-  .project p {
-    font-size: 14px;
-    color: #ffffff7c;
-    line-height: 20px;
+  .Project p {
+    font-size: 15px;
+    color: #ffffffa1;
+    line-height: 25px;
     text-align: justify;
   }
   
-  .project .languages {
+  .Project .languages {
     width: fit-content;
     margin-top: 40px;
   }
   
-  .project .languages ul {
+  .Project .languages ul {
     display: flex;
     align-items: center;
   }
-  .project .languages ul li {
+  .Project .languages ul li {
     margin-right: 10px;
-    color: #F45815;
     list-style: none;
     font-size: 14px;
-  }
-  .external {
-    color: #F45815;;
+    color: #ffffff7c;
   }
   
-  .project_icons {
+  .Project_icons {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
     align-items: center;
   }
   
-  .project_folder {
+  .Project_folder {
     font-size: 60px;
-    color: #F45815;
   }
   
   .work_btn {
@@ -1777,17 +1728,6 @@ html {
     .services {
         box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
     }
-    .personal_contact {
-        display: none;
-    }
-    .class_section {
-        align-items: unset;
-        justify-content: unset;
-    }
-    
-    .contact {
-        width: 100%;
-    }
     .blog_post h1 {
         font-size: 30px;
         margin-bottom: 50px;
@@ -1807,7 +1747,6 @@ html {
     .project {
         padding: 25px 20px;
         cursor: pointer;
-        box-shadow: 10px 10px 30px #0d2242;
     }
     .project h2{
         color: #ffffffb7;
@@ -2196,17 +2135,6 @@ html {
     .services {
         box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
     }
-    .personal_contact {
-        display: none;
-    }
-    .class_section {
-        align-items: unset;
-        justify-content: unset;
-    }
-    
-    .contact {
-        width: 100%;
-    }
     .blog_post h1 {
         font-size: 30px;
         margin-bottom: 50px;
@@ -2226,7 +2154,6 @@ html {
     .project {
         padding: 35px 30px;
         cursor: pointer;
-        box-shadow: 10px 10px 30px #0d2242;
     }
     .project h2{
         color: #ffffffb7;
@@ -2644,17 +2571,6 @@ html {
     .services {
         box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
     }
-    .personal_contact {
-        display: none;
-    }
-    .class_section {
-        align-items: unset;
-        justify-content: unset;
-    }
-    
-    .contact {
-        width: 100%;
-    }
     .blog_post h1 {
         font-size: 30px;
         margin-bottom: 50px;
@@ -2674,7 +2590,6 @@ html {
     .project {
         padding: 35px 30px;
         cursor: pointer;
-        box-shadow: 10px 10px 30px #0d2242;
     }
     .project h2{
         color: #ffffffb7;
@@ -3008,18 +2923,6 @@ html {
         font-size: 32px;
         color: #ffffff9c;
         margin-top: 40px;
-    }
-    .personal_contact {
-        width: 250px;
-        height: 350px;
-        padding: 50px 30px;
-        margin-right: -40px;
-    }
-    .fast_contact i {
-        padding: 12px;
-        border-radius: 50%;
-        margin-right: 15px;
-        font-size: 15px;
     }
     /* THE END OF THE CONTACT FORM */
     

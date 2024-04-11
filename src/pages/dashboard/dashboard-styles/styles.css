@@ -506,8 +506,7 @@ td i {
     color: #ffffff80;
     width: 100%;
     padding: 15px;
-    height: calc(100% - 53px);
-    overflow: scroll;
+    margin-top: 20px;
 }
 
 .work_section{
@@ -517,55 +516,12 @@ td i {
     grid-auto-rows: minmax(200px, auto);
     margin-bottom: 30px;
 }
-.project {
-    padding: 20px;
-    background-color: #123058;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.project h2{
-    margin-bottom: 14px;
-    color: #fff;
-}
-.project p {
-    font-size: 13px;
-    color: #ffffff7c;
-    line-height: 20px;
-    text-align: justify;
-}
-
-.project .languages {
-    width: fit-content;
-    margin-top: 20px;
-}
-
-.project .languages ul {
-    display: flex;
-    align-items: center;
-}
-.project .languages ul li {
-    margin-right: 10px;
-    color: #ffffff7c;
-    list-style: none;
-    font-size: 14px;
-}
 
 .project_icons {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
     align-items: center;
-}
-
-.project_folder {
-    font-size: 25px;
-    color: #fff;
-}
-
-.project_icons .external i {
-    margin-left: 12px;
-    color: #ffffffcb;
-    font-size: 14px;
 }
 
 /* ADDING NEW PROJECT SECTION */

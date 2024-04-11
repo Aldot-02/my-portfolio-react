@@ -1,6 +1,7 @@
 import React from 'react';
 import { CiFolderOn } from 'react-icons/ci';
 import { IoMdOpen } from 'react-icons/io';
+import Reveal from '../components/reveal';
 
 interface ProjectProps {
     id: string;
@@ -27,29 +28,43 @@ const Project: React.FC<ProjectProps> = ({
 }) => {
     return (
         <>
-            <div className="project" style={{backgroundColor: "#0d2242"}}>
+            <div className="Project" style={{border: "0.5px solid #0f2f5ffe"}}>
                 <div className="project_icons">
-                    <CiFolderOn className="project_folder" />
+                    <Reveal>
+                        <CiFolderOn className="project_folder" style={{color: "#F45815", fontSize: "50px"}}/>
+                    </Reveal>
                     <div className="external">
-                        <a href={deployedUrl} target="_blank" rel="noopener noreferrer">
-                            <IoMdOpen className="new-tab" style={{ marginLeft: "15px", fontSize: "18px" }} />
-                        </a>
+                        <Reveal>
+                            <a href={deployedUrl} target="_blank" rel="noopener noreferrer">
+                                <IoMdOpen className="new-tab" style={{ marginLeft: "15px", fontSize: "18px", color: "#F45815" }} />
+                            </a>
+                        </Reveal>
                     </div>
                 </div>
-                <h2>{title}</h2>
-                <p>{description}</p>
+                <Reveal>
+                    <h2>{title}</h2>
+                </Reveal>
+                <Reveal>
+                    <p>{description}</p>
+                </Reveal>
                 {activePath === '/admin/projects' ? (
                     <div className="project_buttons" style={{marginTop: "30px"}}>
-                        <button className="delete-btn" style={{marginRight: "20px"}} onClick={() => handleDeleteProject(id)}>Delete</button>
-                        <button className="user-btn">Edit</button>
+                        <Reveal>
+                            <button className="delete-btn" style={{marginRight: "20px"}} onClick={() => handleDeleteProject(id)}>Delete</button>
+                        </Reveal>
+                        <Reveal>
+                            <button className="user-btn">Edit</button>
+                        </Reveal>
                     </div>
                 ) : (
                     <div className="languages">
-                        <ul>
-                            <li>{firstTechnology}</li>
-                            {secondTechnology && <li>{secondTechnology}</li>}
-                            {thirdTechnology && <li>{thirdTechnology}</li>}
-                        </ul>
+                        <Reveal>
+                            <ul>
+                                <li>{firstTechnology}</li>
+                                {secondTechnology && <li>{secondTechnology}</li>}
+                                {thirdTechnology && <li>{thirdTechnology}</li>}
+                            </ul>
+                        </Reveal>
                     </div>
                 )}
             </div>
