@@ -257,10 +257,7 @@ const HomePage: React.FC = () => {
                     </div>
 
                     {/* EXPERIENCE SECTION */}
-                    <div className="experience-header" id='experience'>
-                        <h2><span className='color'>02. </span>Experience</h2>
-                        <div className="exp-line"></div>
-                    </div>
+                    <h2 className='experience-section'><span className='color' id='experience'>02. </span>Experience</h2>
                     <div className="timeline">
                         <div className="timeline-container left-container">
                             <img alt="" src={Alx}/>

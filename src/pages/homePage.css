@@ -34,30 +34,6 @@ html {
   }
   
   /* NAVIGATION BAR STYLING */
-/* 
-  header {
-    padding: 20px 80px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-  }
-
-  header {
-    padding: 20px 80px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    backdrop-filter: blur(10px);
-    border-bottom: 2px solid #0C2342;
-    z-index: 100;
-    left: 0;
-    position: fixed;
-    transition: top 0.3s ease-in-out;
-    animation: fadeInDown 0.6s ease-out;
-  } */
 
   /* Header style when not scrolling */
 .header-top {
@@ -86,31 +62,16 @@ html {
   box-shadow: 0px 7px 20px rgba(10, 25, 47, 0.1);
 }
 
-  @keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* .header-scroll::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: linear-gradient(90deg, transparent, #fff);
-    transition: .5s;
+@keyframes fadeInDown {
+  0% {
+      opacity: 0;
+      transform: translateY(-30px);
   }
-
-  .header-scroll:hover::before {
-    left: 100%;
-  } */
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
 
   .navbar a {
     color: #fff;
@@ -290,7 +251,7 @@ html {
   .index_content {
     display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 100%;
   }
   
   .index_content .greetings,.role,.description {
@@ -362,10 +323,6 @@ html {
   
   /* THE ABOUT PAGE */
   
-  .margin-scroll {
-    margin-top: 80px;
-  }
-  
   .about {
     display: grid;
     height: fit-content;
@@ -416,6 +373,7 @@ html {
     margin-bottom: 60px;
     align-items: center;
     height: 30px;
+    justify-content: end;
 }
 .my_story .about-heading h2 {
     font-size: 30px;
@@ -425,7 +383,7 @@ html {
   }
 
   .my_story .about-heading .line {
-    width: 50%;
+    width: 30%;
     height: 0.4px;
     background-color: #F45815;
     margin-right: 20px;
@@ -448,8 +406,11 @@ html {
   list-style-type: none;
   padding-left: 0;
 }
+.social_res-icons{
+  display: none;
+}
 .tech-skills ul {
-  margin: 30px;
+  margin: 30px 0 30px 0;
 }
 .tech-skills li, .timeline-container .text-box ul li {
   position: relative;
@@ -500,20 +461,9 @@ html {
   }
 }
 
-.experience-header {
-  display: flex;
-  width: 50vw;
-  margin-bottom: 60px;
-  align-items: center;
-  height: 30px;
-}
-
-.exp-line {
-  width: 50%;
-  height: 0.4px;
-  background-color: #F45815;
-  margin-left: 20px;
-  align-self: center;
+.experience-section {
+  margin-top: 150px;
+  text-align: center;
 }
 .timeline-container .text-box{
   color: #e1d5d080;
@@ -1427,6 +1377,12 @@ html {
     body {
         overflow-x: hidden;
     }
+    .resume-button {
+      padding: 0;
+      border: none;
+      text-decoration: none;
+      border-radius: 0;
+    }
     .tech-skills ul{
       margin-right: 0;
       margin-left: 30px;
@@ -1434,16 +1390,11 @@ html {
     .social_res-icons {
         display: flex;
         margin-top: 70px;
-        width: 300px;
-        padding: 10px;
+        width: 250px;
+        padding: 10px 20px;
         align-self: center;
         color: #ffffff80;
         justify-content: space-between;
-    }
-    .social_res-icons i{
-        font-size: 25px;
-        cursor: pointer;
-        color: #ffffff80;
     }
     a {
         text-decoration: none;
@@ -1452,20 +1403,25 @@ html {
         font-size: 16px;
     }
 
+    header {
+      padding: 40px 20px 0 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
     .header-top {
       padding: 40px 20px 0 20px;
       width: 100%;
+      justify-content: space-between;
     }
     .header-scroll {
       padding: 20px;
       width: 100%;
     }
-
-    .logo img{
-      height: 50px;
-      width: 50px;
-    }
-    .header-scroll .logo img {
+    .logo img {
       height: 50px;
       width: 50px;
     }
@@ -1475,14 +1431,30 @@ html {
     }
     .navbar {
       position: fixed;
-      top: 100%;
+      top: 60%;
       left: 0;
       width: 100%;
       padding: 4rem 4%;
       display: none;
+      font-size: 16px;
+      padding-left: 20px;
+      color: #ffffff80;
     }
     .navbar.active-menu {
       display: block;
+      transition: all 0.3s ease-in-out;
+      animation: fadeInDownnav 0.3s ease-in-out;
+
+    }
+    @keyframes fadeInDownnav {
+      0% {
+          opacity: 0;
+          transform: translateX(-100%);
+      }
+      100% {
+          opacity: 1;
+          transform: translateY(0);
+      }
     }
     .navbar a {
       display: block;
@@ -1830,21 +1802,32 @@ html {
         overflow-x: hidden;
     }
 
+    .resume-button {
+      padding: 0;
+      border: none;
+      text-decoration: none;
+      border-radius: 0;
+    }
+    header {
+      padding: 50px 50px 0 50px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      margin-bottom: 0;
+    }
 
     .header-top {
       width: 100%;
       padding: 50px 50px 0 50px;
+      justify-content: space-between;
     }
     .header-scroll {
       width: 100%;
-      padding: 50px;
+      padding: 20px 50px;
     }
-
-    .logo img{
-      height: 70px;
-      width: 70px;
-    }
-    .header-scroll .logo img {
+    .logo img {
       height: 50px;
       width: 50px;
     }
@@ -1857,7 +1840,7 @@ html {
       top: 100%;
       left: 0;
       width: 100%;
-      padding: 4rem 4%;
+      padding: 4rem 50px;
       display: none;
     }
     .navbar.active-menu {
@@ -1885,8 +1868,8 @@ html {
     .social_res-icons {
         display: flex;
         margin-top: 70px;
-        width: 400px;
-        padding: 10px;
+        width: 350px;
+        padding: 10px 20px;
         align-self: center;
         color: #ffffff80;
         justify-content: space-between;
@@ -1915,6 +1898,7 @@ html {
     }
     .index {
         flex-direction: column;
+        margin-top: 0;
     }
     .index_content {
         flex-direction: column;
@@ -1927,7 +1911,7 @@ html {
         padding-bottom: 18px;
     }
     .index_content .greetings h1 {
-        margin-top: 60px;
+        margin-top: 10px;
     }
     .index_content .name h2 {
         font-size: 2.3rem;
@@ -1944,16 +1928,6 @@ html {
         align-self: center;
         margin-bottom: 0;
     }
-    .profile_image {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .profile_image img {
-        border-radius: 4px;
-        width: 85%;
-        height: 100%;
-    }
     .about {
         display: flex;
         margin-top: 20px;
@@ -1961,48 +1935,21 @@ html {
         flex-direction: column;
         padding: 0;
     }
-    .quote {
-        display: block;
-        margin-top: 30px;
-        text-align: center;
-        color: #F45815;
-    }
     
     .my_story {
         text-align: justify;
         padding: 0;
+        order: 1;
     }
-    .my_skills {
-        order: 4;
-        padding: 0;
+    .my_story_profile {
+      order: 2;
+      margin-bottom: 80px;
     }
-    .wrapper-diamond {
-        transform: rotate(45deg);
-        margin-top: 40px;
+    .my_story .about-heading h2, #experience {
+      font-size: 30px;
     }
-    .box {
-        height: 90px;
-        width: 90px;
-    }
-    .skills {
-        display: flex;
-        margin-top: 70px;
-        flex-direction: row;
-    }
-    
-    .skills i {
-        font-size: 45px;
-        margin-right: 20px;
-        margin-bottom: 0;
-    }    
-    .what_I_do {
-        margin-top: 60px;
-    }
-    .offerings {
-        gap: 15px;
-    }
-    .services {
-        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+    .my_story .about-heading .line {
+      width: 35%;
     }
     .blog_post h1 {
         font-size: 30px;
@@ -2010,15 +1957,6 @@ html {
     }    
     .blogs .post {
         box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
-    } 
-    .read-more-btn {
-        font-size: 16px;
-    }
-    
-    .read-more-btn:hover {
-        box-shadow: 3px 3px #F45815;
-        color: #fff;
-    
     }
     .project {
         padding: 35px 30px;
@@ -2243,16 +2181,42 @@ html {
         color: #ffffff80;
         justify-content: space-between;
     }
-    .social_res-icons i{
-        font-size: 30px;
-        cursor: pointer;
-        color: #ffffff80;
+
+    .resume-button {
+      padding: 0;
+      border: none;
+      text-decoration: none;
+      border-radius: 0;
     }
     a {
         text-decoration: none;
         color: white;
         transition: color 0.3s ease;
         font-size: 18px;
+    }
+
+    header {
+      padding: 50px 50px 0 50px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      margin-bottom: 0;
+    }
+
+    .header-top {
+      width: 100%;
+      padding: 50px 50px 0 50px;
+      justify-content: space-between;
+    }
+    .header-scroll {
+      width: 100%;
+      padding: 10px 50px;
+    }
+    .logo img {
+      height: 70px;
+      width: 70px;
     }
     
 
@@ -2264,7 +2228,7 @@ html {
       top: 100%;
       left: 0;
       width: 100%;
-      padding: 4rem 4%;
+      padding: 4rem 50px;
       display: none;
     }
     .navbar.active-menu {
@@ -2293,7 +2257,58 @@ html {
     
     
     /* MAIN SECTION STYLING */
+    #experience {
+      width: 100%;
+      margin-top: 100px;
+    }
     
+    .exp-line {
+      display: none;
+    }
+    .timeline {
+      margin: 20px auto;
+    }
+    .timeline::after {
+      left: 10px
+    }
+    .timeline-container {
+      width: 100%;
+      padding-left: 45px;
+      padding-right: 0;
+    }
+    .text-box {
+      font-size: 13px;
+    }
+    .right-container {
+      left: 0;
+    }
+    .left-container img, .right-container img {
+      left: -10px;
+    }
+    .left-container-arrow {
+      left: -15px;
+      transform: rotate(180deg);
+    }
+    @keyframes moveright {
+      0% {
+        opacity: 1;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes moveleft {
+      0% {
+        opacity: 1;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
     .container {
         display: flex;
         flex-direction: column;
@@ -2309,6 +2324,7 @@ html {
     
     .index {
         flex-direction: column;
+        margin-top: 0;
     }
     .index_content {
         flex-direction: column;
@@ -2321,7 +2337,7 @@ html {
         padding-bottom: 18px;
     }
     .index_content .greetings h1 {
-        margin-top: 65px;
+        margin-top: 10px;
     }
     .index_content .name h2 {
         font-size: 3rem;
@@ -2337,17 +2353,6 @@ html {
     .message {
         margin-bottom: 0;
     }
-    .profile_image {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .profile_image img {
-        border-radius: 4px;
-        width: 85%;
-        height: 100%;
-        box-shadow: 5px 5px 3px#F45815;
-    }
     .about {
         display: flex;
         margin-top: 20px;
@@ -2355,48 +2360,16 @@ html {
         flex-direction: column;
         padding: 0;
     }
-    .quote {
-        display: block;
-        margin-top: 30px;
-        text-align: center;
-        color: #F45815;
-    }
     
     .my_story {
         text-align: justify;
         padding: 0;
+        order: 1;
     }
-    .my_skills {
-        order: 4;
-        padding: 0;
-    }
-    .wrapper-diamond {
-        transform: rotate(45deg);
-        margin-top: 40px;
-    }
-    .box {
-        height: 100px;
-        width: 100px;
-    }
-    .skills {
-        display: flex;
-        margin-top: 90px;
-        flex-direction: row;
-    }
-    
-    .skills i {
-        font-size: 45px;
-        margin-right: 20px;
-        margin-bottom: 0;
-    }    
-    .what_I_do {
-        margin-top: 60px;
-    }
-    .offerings {
-        gap: 15px;
-    }
-    .services {
-        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+    .my_story_profile {
+      order: 2;
+      margin-bottom: 80px;
+      width: 100%;
     }
     .blog_post h1 {
         font-size: 30px;
@@ -2631,35 +2604,49 @@ html {
     a {
         font-size: 17px;
     }
+    
+    .social_res-icons {
+      display: flex;
+      margin-top: 70px;
+      width: 550px;
+      padding: 10px 20px;
+      align-self: center;
+      color: #ffffff80;
+      justify-content: space-between;
+  }
     header {
-      padding: 1.2rem 4%;
+      padding: 20px 0px 20px 80px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+    .logo img {
+      height: 90px;
+      width: 90px;
     }
     /* MAIN SECTION STYLING */
-    
-    .container {
-        grid-template-columns: 70px 1fr;
-    }
     .left_col{
-        width: 70px;
+        display: none;
     }
-    .left_border,.right_border {
-        background-color: #ffffff80;
-    }
-    .first_line {
-        height: 80px;
-    }
-    .social_icons i {
-        color: #ffffff80;
+    aside {
+      display: none;
     }
     
     /* STYLING OF THE INDEX SECTION */
-    
+    .container {
+      padding: 0 80px 0 0;
+      margin-left: 0;
+      width: 100vw;
+    }
     section {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
     }
     .index_content {
-        width: 60%;
+        width: 100%;
     }
     .index_content .greetings,.role,.description {
         padding-bottom: 30px;
@@ -2681,80 +2668,32 @@ html {
     .message {
         padding: 1rem 3.5rem;
     }
-    .profile_image img {
-        background-color: #f45815b4;
-        border-radius: 50%;
-        width: 300px;
-        height: 300px;
-    }
     /* THE ABOUT PAGE */
-    .about {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-gap: 20px;
-        margin-top: 70px;
-    }
-    .quote {
-        color: #F45815;
-    }
-    .my_story {
-        grid-column: 3 / -1;
-        text-align: justify;
-        padding: 30px 0;
-    }
-    .story-heading {
-        grid-column: 1 / 3;
-        background-color: red;
-    }
     .my_story h2 {
-        font-size: 25px;
+        font-size: 30px;
         margin-bottom: 60px;
         color: #ffffffb4;
     }
-    .my_story p {
-        color: #ffffff7e;
-        font-size: 16px;
-    }
-    .my_skills {
-        grid-column: 1 / 4;
-    }
-    .skills {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .skills i {
-        font-size: 60px;
-        color: #ffffff9c;
-        margin-bottom: 30px;
-    }
-    .about-skills {
-        grid-column: 4 / 6;
-    }
-    .what_I_do h2 {
-        margin-bottom: 35px;
-        text-align: center;
-        font-size: 32px;
-        color: #ffffff9c;
-        margin-top: 40px;
-    }
-    /* THE END OF THE CONTACT FORM */
-    
-    
-    /* STYLING THE BLOG SECTION */
-    .blogs .post {
-        /* background: url(/images/about.avif); */
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: end;
-        border-radius: 4px;
-        box-shadow: 10px 10px 30px #0C2342;
-        padding: 0;
-    }
+    .about {
+      display: flex;
+      margin-top: 20px;
+      flex-direction: column;
+      padding: 0;
+      width: 100%;
+  }
+  
+  .my_story {
+      text-align: justify;
+      padding: 0;
+      order: 1;
+      width: 100%;
+      margin-right: 200px;
+  }
+  
+  .my_story_profile {
+    order: 2;
+    margin-bottom: 80px;
+  }
     
     .post_content {
         background-color: rgba(0, 0, 0, 0.8);
@@ -2773,78 +2712,59 @@ html {
     footer {
         color: #ffffff80;
     }
-    /* END OF FOOTER STYLING */
-    
-    
-    /* START OF OPEN-BLOG STYLING */
-    
-    .blog-container {
-        margin: 20px 0;
-        width: 100%;
-    }
-    .blog-page {
-        padding: 50px;
-    }
-    .Related-post-section .related-posts a .related-post-details h4{
-        font-size: 20px;
-    }
-    /* END OF OPEN-BLOG STYLING */
-  }
+}
 
-  @media screen and (max-width: 760px) {
-    .experience-header {
-      display: flex;
-      width: 100%;
-      align-items: center;
-      justify-content: center;
-      margin-top: 100px;
+@media only screen and (max-width: 760px) {
+  #experience {
+    width: 100%;
+    margin-top: 100px;
+  }
+  
+  .exp-line {
+    display: none;
+  }
+  .timeline {
+    margin: 20px auto;
+  }
+  .timeline::after {
+    left: 10px
+  }
+  .timeline-container {
+    width: 100%;
+    padding-left: 45px;
+    padding-right: 0;
+  }
+  .text-box {
+    font-size: 13px;
+  }
+  .right-container {
+    left: 0;
+  }
+  .left-container img, .right-container img {
+    left: -10px;
+  }
+  .left-container-arrow {
+    left: -15px;
+    transform: rotate(180deg);
+  }
+  @keyframes moveright {
+    0% {
+      opacity: 1;
+      transform: translateY(-30px);
     }
-    
-    .exp-line {
-      display: none;
+    100% {
+      opacity: 1;
+      transform: translateY(0);
     }
-    .timeline {
-      margin: 20px auto;
+  }
+  @keyframes moveleft {
+    0% {
+      opacity: 1;
+      transform: translateY(-30px);
     }
-    .timeline::after {
-      left: 10px
+    100% {
+      opacity: 1;
+      transform: translateY(0);
     }
-    .timeline-container {
-      width: 100%;
-      padding-left: 45px;
-      padding-right: 0;
-    }
-    .text-box {
-      font-size: 13px;
-    }
-    .right-container {
-      left: 0;
-    }
-    .left-container img, .right-container img {
-      left: -10px;
-    }
-    .left-container-arrow {
-      left: -15px;
-      transform: rotate(180deg);
-    }
-    @keyframes moveright {
-      0% {
-        opacity: 1;
-        transform: translateY(-30px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    @keyframes moveleft {
-      0% {
-        opacity: 1;
-        transform: translateY(-30px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+  }
 }
