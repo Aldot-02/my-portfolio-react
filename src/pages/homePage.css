@@ -279,6 +279,7 @@ header {
   .index_content .greetings h1 {
     font-size: 16px;
     color: #F45815;
+    font-weight: 50;
   }
   .index_content .name h2 {
     font-size: 5rem;

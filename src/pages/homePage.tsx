@@ -56,21 +56,21 @@ const HomePage: React.FC = () => {
 
     return (
         <>
-            <header style={{ top: visible ? 0 : -128 }}>                 
-                <Link to='' className="logo">
-                        <img alt="" src={Image} />
-                </Link>
-                <TbMenu2 id='menu-icon' className={isMenuOpen ? 'close-icon' : ''} onClick={toggleMenu} />
-                <nav className={`navbar ${isMenuOpen ? 'active-menu' : ''}`}>
-                    <a href="#about" onClick={toggleMenu}><span className="color">01. </span> About</a>
-                    <a href="#experience" onClick={toggleMenu}><span className="color">02. </span> Experience</a>
-                    <a href="#work" onClick={toggleMenu}><span className="color">03. </span> Work</a>
-                    <a href="#contact" onClick={toggleMenu}><span className="color">04. </span> Contact</a>
-                    <a href="https://drive.google.com/file/d/1_WW0lXogY2RWcP3TRN31hHH5oU87cgCB/view?usp=drive_link" className="resume-button" id="login-logout-button" target='_blank' rel="noreferrer" onClick={toggleMenu}>
-                    <span className="color">05. </span> Resume
-                    </a>
-                </nav>
-            </header>
+                <header style={{ top: visible ? 0 : -128 }}>             
+                    <Link to='' className="logo">
+                            <img alt="" src={Image} />
+                    </Link>
+                    <TbMenu2 id='menu-icon' className={isMenuOpen ? 'close-icon' : ''} onClick={toggleMenu} />
+                    <nav className={`navbar ${isMenuOpen ? 'active-menu' : ''}`}>
+                        <a href="#about" onClick={toggleMenu}><span className="color">01. </span> About</a>
+                        <a href="#experience" onClick={toggleMenu}><span className="color">02. </span> Experience</a>
+                        <a href="#work" onClick={toggleMenu}><span className="color">03. </span> Work</a>
+                        <a href="#contact" onClick={toggleMenu}><span className="color">04. </span> Contact</a>
+                        <a href="https://drive.google.com/file/d/1_WW0lXogY2RWcP3TRN31hHH5oU87cgCB/view?usp=drive_link" className="resume-button" id="login-logout-button" target='_blank' rel="noreferrer" onClick={toggleMenu}>
+                        <span className="color">05. </span> Resume
+                        </a>
+                    </nav>
+                </header>
             <div className={`nav-bg ${isMenuOpen ? 'active-menu' : ''}`}></div>
             <main className="container"  id="blur">
                 <aside className="left_col">
@@ -117,7 +117,7 @@ const HomePage: React.FC = () => {
                             </div>
                             <div className="name">
                                 <Reaveal>
-                                    <h2>Aldo Twizerimana</h2>
+                                    <h2>Aldo Twizerimana.</h2>
                                 </Reaveal>
                             </div>
                             <div className="role">
