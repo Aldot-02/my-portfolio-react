@@ -411,10 +411,10 @@ const HomePage: React.FC = () => {
                     </div>
                     <footer>
                         <Reaveal>
-                            <p className="copyright">Designed and Built By Aldo Twizerimana</p>
+                            <p className="copyright" style={{color: "#8892b0", fontSize: "16px"}}>Designed and Built By Aldo Twizerimana</p>
                         </Reaveal>
                         <Reaveal>
-                            <p className="git_ratings">Follow me on my <Link to="https://github.com/Aldot-02">Github</Link></p>
+                            <p className="git_ratings" style={{color: "#8892b0", fontSize: "16px"}}>Follow me on my <a href="https://github.com/Aldot-02" className='color'>Github</a></p>
                         </Reaveal>
                     </footer>
                 </section>
