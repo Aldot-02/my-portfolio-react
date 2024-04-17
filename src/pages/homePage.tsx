@@ -414,7 +414,7 @@ const HomePage: React.FC = () => {
                             <p className="copyright" style={{color: "#8892b0", fontSize: "16px"}}>Designed and Built By Aldo Twizerimana</p>
                         </Reaveal>
                         <Reaveal>
-                            <p className="git_ratings" style={{color: "#8892b0", fontSize: "16px"}}>Follow me on my <a href="https://github.com/Aldot-02" className='color'>Github</a></p>
+                            <p className="git_ratings" style={{color: "#8892b0", fontSize: "16px"}}>Follow me on my <a href="tel:=+250789764748" className='color'>Github</a></p>
                         </Reaveal>
                     </footer>
                 </section>
