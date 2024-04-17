@@ -56,6 +56,12 @@ const HomePage: React.FC = () => {
 
     return (
         <>
+            
+                <div className="floating-button">
+                    <a href="https://wa.me/+250 789 764 748">
+                        <MdOutlinePermPhoneMsg style={{fontSize: "20px"}}/>
+                    </a>
+                </div>
                 <header style={{ top: visible ? 0 : -128 }}>             
                     <Link to='' className="logo">
                             <img alt="" src={Image} />
@@ -133,7 +139,7 @@ const HomePage: React.FC = () => {
                             <Reaveal>
                                 <a href="#contact">
                                     <div className="message">
-                                            <MdOutlinePermPhoneMsg style={{fontSize: "20px", marginRight: "15px"}}/>
+                                            <TfiEmail style={{fontSize: "20px", marginRight: "15px"}}/>
                                             <p>Hire Me</p>
                                     </div>
                                 </a>
@@ -414,7 +420,7 @@ const HomePage: React.FC = () => {
                             <p className="copyright" style={{color: "#8892b0", fontSize: "16px"}}>Designed and Built By Aldo Twizerimana</p>
                         </Reaveal>
                         <Reaveal>
-                            <p className="git_ratings" style={{color: "#8892b0", fontSize: "16px"}}>Follow me on my <a href="tel:=+250789764748" className='color'>Github</a></p>
+                            <p className="git_ratings" style={{color: "#8892b0", fontSize: "16px"}}>Follow me on my <a href="https://github.com/Aldot-02" className='color'>Github</a></p>
                         </Reaveal>
                     </footer>
                 </section>

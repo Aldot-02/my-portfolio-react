@@ -59,6 +59,24 @@ html {
     box-sizing: border-box;
     scroll-behavior: smooth;
   }
+
+  .floating-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--light-border);
+    position: fixed;
+    bottom: 40px;
+    right: 18px;
+    color: var(--primary-color);
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* line-height: 60px; */
+    cursor: pointer;
+    border: .3px solid var(--dark-orange);
+  }
   ::-webkit-scrollbar {
     width: 10px;
   }
