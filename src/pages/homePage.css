@@ -39,6 +39,12 @@
   --paragraph-spacing: 30px;
   --pletter-spacing: 1px;
 }
+
+
+::selection {
+    background-color: var(--dark-orange);
+    color: var(--primary-color);
+}
 html {
   scroll-behavior: smooth;
 }
@@ -66,13 +72,13 @@ html {
     border-radius: 50%;
     background: transparent;
     position: fixed;
-    bottom: 30px;
+    bottom: 20px;
     right: 18px;
     overflow: hidden;
     z-index: 900;
   }
   .floating-button a {
-    inset: 4px;
+    inset: 8px;
     position: absolute;
     background-color: var(--dark-orange);
     display: flex;
@@ -82,73 +88,8 @@ html {
     border-radius: 50%;
     color: #fff;
   }
-
-  /* .floating-button::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(0deg, transparent, transparent, #F45815, #F45815, #F45815);
-    z-index: 901;
-    transform-origin: bottom right;
-    animation: rotate 6s linear infinite;
-  }
-  .floating-button::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(0deg, transparent, transparent, #F45815, #F45815, #F45815);
-    z-index: 901;
-    transform-origin: bottom right;
-    animation: rotate 6s linear infinite;
-    animation-delay: -3s;
-  }
-
-  .borderLine {
-    position: absolute;
-    top: 0;
-    inset: 0;
-  }
-
-  .borderLine::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(0deg, transparent, transparent, var(--blue), var(--blue), var(--blue));
-    z-index: 1;
-    transform-origin: bottom right;
-    animation: rotate 6s linear infinite;
-    animation-delay: -1.5s;
-  }
-  .borderLine::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(0deg, transparent, transparent, var(--blue), var(--blue), var(--blue));
-    z-index: 1;
-    transform-origin: bottom right;
-    animation: rotate 6s linear infinite;
-    animation-delay: -8.5s;
-  } */
-
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  .floating-button a:hover {
+    color: var(--primary-color);
   }
   ::-webkit-scrollbar {
     width: 10px;
@@ -409,7 +350,6 @@ header {
   .index_content .greetings h1 {
     font-size: var(--fz-md);
     color: var(--dark-orange);
-    font-weight: 50;
   }
   .index_content .name h2 {
     font-size: 5rem;

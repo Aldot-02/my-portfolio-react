@@ -57,8 +57,7 @@ const HomePage: React.FC = () => {
     return (
         <>
                 <div className="floating-button">
-                <span className='borderLine'></span>
-                    <a href="https://wa.me/0789764748">
+                    <a href="https://wa.me/250789764748">
                         <MdOutlinePermPhoneMsg style={{fontSize: "20px"}}/>
                     </a>
                 </div>
@@ -128,12 +127,12 @@ const HomePage: React.FC = () => {
                             </div>
                             <div className="role">
                                 <Reaveal>
-                                    <h3>I'm a Creative Code <span className='color'>Artisan</span></h3>
+                                    <h3>I'm a Creative Code <span className='color'>Artisan.</span></h3>
                                 </Reaveal>
                             </div>
                             <div className="description">
                                 <Reaveal>
-                                    <p>I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, and cross-cutting tech solutions through <span className='color'>Andela Apprenticeship</span>.</p> 
+                                    <p>I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, and cross-cutting tech solutions through <span className='color'>Andela Apprenticeship.</span></p> 
                                 </Reaveal>
                             </div>
                             <Reaveal>
