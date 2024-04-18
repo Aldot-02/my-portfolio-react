@@ -56,9 +56,9 @@ const HomePage: React.FC = () => {
 
     return (
         <>
-            
                 <div className="floating-button">
-                    <a href="https://wa.me/+250 789 764 748">
+                <span className='borderLine'></span>
+                    <a href="https://wa.me/0789764748">
                         <MdOutlinePermPhoneMsg style={{fontSize: "20px"}}/>
                     </a>
                 </div>

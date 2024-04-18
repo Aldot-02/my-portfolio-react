@@ -64,18 +64,91 @@ html {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: var(--light-border);
+    background: transparent;
     position: fixed;
-    bottom: 40px;
+    bottom: 30px;
     right: 18px;
-    color: var(--primary-color);
-    /* text-align: center; */
+    overflow: hidden;
+    z-index: 900;
+  }
+  .floating-button a {
+    inset: 4px;
+    position: absolute;
+    background-color: var(--dark-orange);
     display: flex;
     align-items: center;
     justify-content: center;
-    /* line-height: 60px; */
-    cursor: pointer;
-    border: .3px solid var(--dark-orange);
+    z-index: 950;
+    border-radius: 50%;
+    color: #fff;
+  }
+
+  /* .floating-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(0deg, transparent, transparent, #F45815, #F45815, #F45815);
+    z-index: 901;
+    transform-origin: bottom right;
+    animation: rotate 6s linear infinite;
+  }
+  .floating-button::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(0deg, transparent, transparent, #F45815, #F45815, #F45815);
+    z-index: 901;
+    transform-origin: bottom right;
+    animation: rotate 6s linear infinite;
+    animation-delay: -3s;
+  }
+
+  .borderLine {
+    position: absolute;
+    top: 0;
+    inset: 0;
+  }
+
+  .borderLine::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(0deg, transparent, transparent, var(--blue), var(--blue), var(--blue));
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: rotate 6s linear infinite;
+    animation-delay: -1.5s;
+  }
+  .borderLine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(0deg, transparent, transparent, var(--blue), var(--blue), var(--blue));
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: rotate 6s linear infinite;
+    animation-delay: -8.5s;
+  } */
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
   ::-webkit-scrollbar {
     width: 10px;
@@ -151,7 +224,7 @@ header {
     color: var(--dark-orange);
   }
   .navbar a:nth-child(5):hover {
-    color: var(--accent-color);
+    color: var(--primary-color);
   }
   .navbar a:nth-child(5) span {
     display: none;
@@ -221,7 +294,7 @@ header {
   }
   
   .resume-button-li a:hover {
-    color: var(--accent-color);
+    color: var(--primary-color);
   
   }
   
