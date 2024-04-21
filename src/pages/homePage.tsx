@@ -71,7 +71,7 @@ const HomePage: React.FC = () => {
                         <a href="#experience" onClick={toggleMenu}><span className="color">02. </span> Experience</a>
                         <a href="#work" onClick={toggleMenu}><span className="color">03. </span> Work</a>
                         <a href="#contact" onClick={toggleMenu}><span className="color">04. </span> Contact</a>
-                        <a href="https://drive.google.com/file/d/1_WW0lXogY2RWcP3TRN31hHH5oU87cgCB/view?usp=drive_link" className="resume-button" id="login-logout-button" target='_blank' rel="noreferrer" onClick={toggleMenu}>
+                        <a href="https://drive.google.com/file/d/15fYcRY0xA3l95DGCV2EPXua8aX74w7b2/view?usp=sharing" className="resume-button" id="login-logout-button" target='_blank' rel="noreferrer" onClick={toggleMenu}>
                         <span className="color">05. </span> Resume
                         </a>
                     </nav>
@@ -127,12 +127,12 @@ const HomePage: React.FC = () => {
                             </div>
                             <div className="role">
                                 <Reaveal>
-                                    <h3>I'm a Creative Code <span className='color'>Artisan.</span></h3>
+                                    <h3>I'm a Creative  <span className='color'>Code </span>Artisan.</h3>
                                 </Reaveal>
                             </div>
                             <div className="description">
                                 <Reaveal>
-                                    <p>I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, and cross-cutting tech solutions through <span className='color'>Andela Apprenticeship.</span></p> 
+                                    <p>I’m a software engineer specializing in building and designing exceptional digital experiences. Currently, I’m focused on building accessible, and cross-cutting tech solutions through <span className='color'>Andela Apprenticeship.</span></p> 
                                 </Reaveal>
                             </div>
                             <Reaveal>
@@ -199,7 +199,7 @@ const HomePage: React.FC = () => {
                                             <h3>Frontend Development</h3>
                                         </Reaveal>
                                         <Reaveal>
-                                            <p>I can build a beautiful, responsive, and accessible website using HTML, CSS, React, and JavaScript.</p>
+                                            <p>I build elegant and accessible apps & websites using CSS, React, Next.js, Bootstrap, and Vanilla JavaScript.</p>
                                         </Reaveal>
                                     </div>
                                     <div className="card">
@@ -210,7 +210,7 @@ const HomePage: React.FC = () => {
                                             <h3>Backend Development</h3>
                                         </Reaveal>
                                         <Reaveal>
-                                            <p>I can build a scalable and secure backend using Node.js, Express, and MongoDB.</p>
+                                            <p>I build a scalable and secure backend functionality of apps & websites using Node.js, Express, MongoDB, and Postgresql.</p>
                                         </Reaveal>
                                     </div>
                                     <div className="card">
@@ -221,7 +221,7 @@ const HomePage: React.FC = () => {
                                             <h3>Mobile Development</h3>
                                         </Reaveal>
                                         <Reaveal>
-                                            <p>I can build a mobile application using React Native.</p>
+                                            <p>I build a mobile applications using React Native.</p>
                                         </Reaveal>
                                     </div>
                                     <div className='card'>
@@ -232,7 +232,7 @@ const HomePage: React.FC = () => {
                                             <h3>Database Management</h3>
                                         </Reaveal>
                                         <Reaveal>
-                                            <p>I can manage and maintain databases using SQL and NoSQL databases.</p>
+                                            <p>I manage and maintain databases using SQL and NoSQL databases.</p>
                                         </Reaveal>
                                     </div>
                                     <div className='card'>
@@ -243,7 +243,7 @@ const HomePage: React.FC = () => {
                                             <h3>Data Engineering</h3>
                                         </Reaveal>
                                         <Reaveal>
-                                            <p>I can build datawarehouses and datapipelines using Snowflake, AmazonRedshift, and BigQuery.</p>
+                                            <p>I build datawarehouses and datapipelines using Snowflake, AmazonRedshift, and BigQuery.</p>
                                         </Reaveal>
                                     </div>
                                     <div className='card'>
@@ -254,7 +254,7 @@ const HomePage: React.FC = () => {
                                             <h3>Data Strategy Documentation</h3>
                                         </Reaveal>
                                         <Reaveal>
-                                            <p>I can help your business have the key guide/blue print about the company's data and data management methodologies.</p>
+                                            <p>I help businesses to build data strategy about the company's data and data management methodologies.</p>
                                         </Reaveal>
                                     </div>
                             </div>
@@ -269,10 +269,10 @@ const HomePage: React.FC = () => {
                             <div className="text-box">
                                     <div className="experience">
                                         <Reaveal>
-                                            <h2>Fullstack Software Developer @<span className='color'>ALX Africa</span></h2>
+                                            <h2>Fullstack Software Developer @<span className='color'>Andela</span></h2>
                                         </Reaveal>
                                         <Reaveal>
-                                            <p style={{fontSize: "16px"}}>Nov 2022 - Dec 2023 . <span className='color'>Remote</span></p>
+                                            <p style={{fontSize: "16px"}}>Jan 2024 - Present . <span className='color'>Remote</span></p>
                                         </Reaveal>
                                         <Reaveal>
                                             <p className='color'  style={{fontSize: "14px"}}>- Apprenticeship -</p>
@@ -280,19 +280,13 @@ const HomePage: React.FC = () => {
                                     </div>
                                     <ul>
                                         <Reaveal>
-                                            <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                            <li>Acquired hands-on experience with modern web development technologies and best practices, enhancing problem-solving skills, attention to detail, and ability to prioritize tasks in a dynamic and fast-paced development environment.</li>
                                         </Reaveal>
                                         <Reaveal>
-                                            <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                            <li>Collaborated with team members to design and build an e-commerce marketplace platform, incorporating functionalities like user authentication, product management, cart functionality, and checkout process using Node.js, Express, PostgreSQL, and React, as well as working independently to develop fully functional blog website</li>
                                         </Reaveal>
                                         <Reaveal>
-                                            <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
-                                        </Reaveal>
-                                        <Reaveal>
-                                            <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
-                                        </Reaveal>
-                                        <Reaveal>
-                                            <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                            <li>Demonstrated effective leadership, communication, and collaboration skills within a team environment, conducting code reviews, providing feedback, and addressing issues to improve code quality and project outcomes.</li>
                                         </Reaveal>
                                     </ul>
                                 <span className='left-container-arrow'></span>
@@ -314,19 +308,19 @@ const HomePage: React.FC = () => {
                                 </div>
                                 <ul>
                                     <Reaveal>
-                                        <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                        <li>Developed data strategy for both Umurava and Inyange companies,  that provides the guiding plan to define the people, processes and technology necessary to solve data challenges they were facing and support their business goal.</li>
                                     </Reaveal>
                                     <Reaveal>
-                                        <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                        <li>Built a data lake that will help to eliminate the need for data modeling at the time of ingestion in the future after the data warehouse is built and be used for data analysis.</li>
                                     </Reaveal>
                                     <Reaveal>
-                                        <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                        <li>Developed Data warehouse architectures to define the structure of those companies' data warehouse.</li>
                                     </Reaveal>
                                     <Reaveal>
-                                        <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                        <li>Worked on Data modeling and ETL processes documentation that will include data sources and transformation used to populate the data warehouse as well as entities and relationships within the data.</li>
                                     </Reaveal>
                                     <Reaveal>
-                                        <li>Line 138:37:  img alt="" elements must have an alt prop, either with meaningful text, or an empty string for decorative images</li>
+                                        <li>Worked on automating data pipelines for uploading data in the data warehouse programmatically rather than manually for long-term sustainability.</li>
                                     </Reaveal>
                                 </ul>
                                 <span className='right-container-arrow'></span>
@@ -337,10 +331,10 @@ const HomePage: React.FC = () => {
                             <div className="text-box">
                                 <div className="experience">
                                     <Reaveal>
-                                        <h2>Fullstack Software Developer @<span className='color'>Andela</span></h2>
+                                        <h2>Fullstack Software Developer @<span className='color'>ALX Africa</span></h2>
                                     </Reaveal>
                                     <Reaveal>
-                                        <p style={{fontSize: "16px"}}>Jan 2024 - Present . <span className='color'>Remote</span></p>
+                                        <p style={{fontSize: "16px"}}>Nov 2022 - Dec 2023 . <span className='color'>Remote</span></p>
                                     </Reaveal>
                                     <Reaveal>
                                         <p className='color'  style={{fontSize: "14px"}}>- Apprenticeship -</p>
