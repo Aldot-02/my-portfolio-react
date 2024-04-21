@@ -71,7 +71,7 @@ const HomePage: React.FC = () => {
                         <a href="#experience" onClick={toggleMenu}><span className="color">02. </span> Experience</a>
                         <a href="#work" onClick={toggleMenu}><span className="color">03. </span> Work</a>
                         <a href="#contact" onClick={toggleMenu}><span className="color">04. </span> Contact</a>
-                        <a href="https://drive.google.com/file/d/15fYcRY0xA3l95DGCV2EPXua8aX74w7b2/view?usp=sharing" className="resume-button" id="login-logout-button" target='_blank' rel="noreferrer" onClick={toggleMenu}>
+                        <a href="https://drive.google.com/file/d/1hphhSS35RVk-pgzpR9FIMsG7hxUaZxwr/view?usp=sharing" className="resume-button" id="login-logout-button" target='_blank' rel="noreferrer" onClick={toggleMenu}>
                         <span className="color">05. </span> Resume
                         </a>
                     </nav>
